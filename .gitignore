@@ -1,3 +1,4 @@
 nosedir/
 *~
 *.pyc
+*.log

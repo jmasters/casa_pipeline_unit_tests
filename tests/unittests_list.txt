@@ -1,0 +1,10 @@
+#
+# The following list of tests is used when no option is given
+# to run the script runUnitTest.py
+#
+# These tests are also run automatically by Hudson.
+# The second column gives the name of the person responsible for each test
+# Do not include the suffix .py
+
+test_hello_world		jmasters@nrao.edu
+test_utils			jmasters@nrao.edu

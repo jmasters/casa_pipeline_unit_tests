@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:SciPipeRequest xmlns:ns2="Common/pipelinescience/SciPipeRequest">
+    <ProjectSummary>
+        <ProposalCode>13A-537</ProposalCode>
+        <Observatory>NRAO</Observatory>
+        <Telescope>VLA</Telescope>
+        <ProcessingSite>Socorro</ProcessingSite>
+        <Operator>UNDEFINED</Operator>
+        <Mode>CSV</Mode>
+        <Version>UNDEFINED</Version>
+        <CreationTime>2014-07-18T14:37:32</CreationTime>
+    </ProjectSummary>
+    <ProjectStructure>TBD</ProjectStructure>
+    <ProcessingRequests>
+        <RootDirectory>a_root_directory</RootDirectory>
+        <ProcessingRequest>
+            <ProcessingIntents>
+                <Intents>
+                    <Keyword xmlns="">CUSTOM_OBSERVING_MODE</Keyword>
+                    <Value xmlns="">Undefined</Value>
+                </Intents>
+                <Intents>
+                    <Keyword xmlns="">SPECTRAL_MODE</Keyword>
+                    <Value xmlns="">False</Value>
+                </Intents>
+            </ProcessingIntents>
+            <ProcessingProcedure>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_importdata</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_hanning</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_flagdata</Command>
+                    <ParameterSet>
+			<Parameter>
+			    <Keyword xmlns="">hm_tbuff</Keyword>
+			    <Value xmlns="">1.5int</Value>
+			</Parameter>
+		    </ParameterSet>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_vlasetjy</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_priorcals</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_testBPdcals</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+		    <Command xmlns="">hifv_flagbaddef</Command>
+		    <ParameterSet/>
+		</ProcessingCommand>
+		<ProcessingCommand>
+		    <Command xmlns="">hifv_checkflag</Command>
+		    <ParameterSet/>
+		</ProcessingCommand>
+		<ProcessingCommand>
+		    <Command xmlns="">hifv_semiFinalBPdcals</Command>
+		    <ParameterSet/>
+		</ProcessingCommand>
+		<ProcessingCommand>
+		    <Command xmlns="">hifv_checkflag</Command>
+		    <ParameterSet>
+			<Parameter>
+			    <Keyword xmlns="">checkflagmode</Keyword>
+			    <Value xmlns="">semi</Value>
+			</Parameter>
+		    </ParameterSet>
+		</ProcessingCommand>
+		<ProcessingCommand>
+		    <Command xmlns="">hifv_semiFinalBPdcals</Command>
+		    <ParameterSet/>
+		</ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_solint</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_fluxboot</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_finalcals</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_applycals</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_targetflag</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_statwt</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hifv_plotsummary</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hif_makeimlist</Command>
+                    <ParameterSet>
+                      <Parameter>
+                       <Keyword xmlns="">intent</Keyword>
+                       <Value xmlns="">PHASE,BANDPASS</Value>
+                      </Parameter>
+                    </ParameterSet>
+                </ProcessingCommand>
+                <ProcessingCommand>
+                    <Command xmlns="">hif_makeimages</Command>
+                    <ParameterSet>
+                    </ParameterSet>
+                </ProcessingCommand>
+		<ProcessingCommand>
+                    <Command xmlns="">hif_exportdata</Command>
+                    <ParameterSet/>
+                </ProcessingCommand>                
+                
+            </ProcessingProcedure>
+            <DataSet>
+                <RelativePath>VLAT003</RelativePath>
+                <SdmIdentifier>13A-537.sb24066356.eb24324502.56514.05971091435</SdmIdentifier>
+                <DataType>asdm</DataType>
+            </DataSet>
+        </ProcessingRequest>
+    </ProcessingRequests>
+    <ResultsProcessing>
+        <ArchiveResults>false</ArchiveResults>
+        <CleanUpDisk>false</CleanUpDisk>
+        <UpdateProjectLifeCycle>false</UpdateProjectLifeCycle>
+        <NotifyOperatorWhenDone>false</NotifyOperatorWhenDone>
+        <PipelineOperatorAddress>Unknown</PipelineOperatorAddress>
+    </ResultsProcessing>
+</ns2:SciPipeRequest>
